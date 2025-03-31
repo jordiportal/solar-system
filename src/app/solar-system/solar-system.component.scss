@@ -1,0 +1,70 @@
+.solar-system-container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  
+  .renderer-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .controls-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    z-index: 100;
+    
+    .speed-control {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: white;
+      font-family: Arial, sans-serif;
+      
+      label {
+        margin-bottom: 5px;
+        font-size: 14px;
+      }
+      
+      .slider {
+        width: 200px;
+        height: 20px;
+        -webkit-appearance: none;
+        background: #111;
+        outline: none;
+        border-radius: 10px;
+        
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background: #4169e1;
+          cursor: pointer;
+        }
+        
+        &::-moz-range-thumb {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background: #4169e1;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+:host {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
